@@ -9,7 +9,7 @@ export default function Home() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:9898/api/waitlist", {
+      const response = await fetch("http://154.53.166.212:9898/api/waitlist", {
         method: "POST",
         body: JSON.stringify({ email }),
       });
