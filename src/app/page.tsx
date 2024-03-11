@@ -8,8 +8,18 @@ export default function Home() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = async () => {
+
+    if (!email.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Error Occurred!",
+        description: "Please enter your email address.",
+      });
+      return; 
+    }
+
     try {
-      const response = await fetch("https://154.53.166.212:9898/api/waitlist", {
+      const response = await fetch("https://api.nettasec.com/api/waitlist", {
         method: "POST",
         body: JSON.stringify({ email }),
       });
@@ -56,7 +66,7 @@ export default function Home() {
           cloud solutions. Follow us as we pave the way for a more secure and
           innovative digital landscape. Stay tuned for more updates!
         </p>
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col sm:flex-row justify-center items-center">
           <input
             type="text"
             placeholder="hi@nettasec.com"
