@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   icons: "https://cdn.discordapp.com/attachments/1166821043743236218/1194009838196359228/nettasec-icon.png?ex=65ef64d1&is=65dcefd1&hm=2d5bb4b2ba1bdfa55657b19906dbc317c835680b21a89cbbb7fd107d1bcfe8e4&",
-  title: "Comming soon.",
+  title: "NettaSec Solutions",
 };
 
 export default function RootLayout({
